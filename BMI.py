@@ -1,7 +1,4 @@
 from tkinter import Tk,mainloop,Label,Text,Button
-lis=[]
-
-
 class deneme:
     def __init__(self):
        self.t=Tk()
@@ -32,7 +29,12 @@ class deneme:
 
 
     def calculate(self):
-       try:
+       
+       if self.t1.get("1.0","end")=="\n" or self.t2.get("1.0","end")=="\n":
+            print("değerlerden biri boş")
+       else:
+           
+        try:
           if not self.t1.get("1.0","end").strip().isdigit() or not self.t2.get("1.0","end").strip().isdigit():
             raise ValueError("tip hatası")
 
